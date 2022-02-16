@@ -1,0 +1,111 @@
+/*header styles*/
+.logo {
+	display: inline-block;
+	margin-right: 50px;
+}
+.navigation {
+	display: inline-block;
+}
+.nav-li {
+	display: inline-block;
+}
+.header-wraper {
+	background: lightblue;
+	padding: 30px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width:  100%;
+	z-index: 150;
+}
+body {
+	height: 1800px;
+	padding-top: 76px;
+}
+.section-after-header {
+	/*margin-top: 76px;*/
+}
+
+/*chat-icon*/
+.chat-icon {
+	height: 80px;
+	position: fixed;
+	right: 35px;
+	bottom: 45px;
+}
+
+.block-wraper {
+	width: 600px;
+	height: 600px;
+	background: yellow;
+	position: relative;
+
+	/*transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: linear;
+	transition-delay: 3s;*/
+	transition: all 0.5s linear 3s;
+}
+.child-block {
+	width: 100px;
+	height: 100px;
+	background: red;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:  translate(-50%,-50%) rotate(45deg);
+	transition: all 0.5s linear;
+	animation: boxAnimation 5s infinite;
+}
+
+/*hover effects*/
+/*.child-block:hover {
+	background: green;
+	transform: translate(-50%,-50%) rotate(0deg);
+}*/
+.block-wraper:hover  {
+	background: blue;
+}
+/*.block-wraper:hover .child-block {
+	background: grey;
+}*/
+.text:hover {
+	color: red;
+	font-weight: bold;
+	font-style: italic;
+}
+
+/*animation Car*/
+.car-animation {
+	height: 300px;
+	animation: carAnimation2 7s infinite 3s;
+	/*position: absolute;*/
+}
+.animation-block {
+	/*position: relative;*/
+}
+
+/*keyframes*/
+@keyframes boxAnimation {
+	0% {transform:  translate(-50%,-50%) rotate(45deg);}
+	20% {transform:  translate(-50%,-50%) rotate(90deg);}
+	50% {transform:  translate(-50%,-50%) rotate(360deg);}
+	80% {transform:  translate(-50%,-50%) rotate(90deg);}
+	100% {transform:  translate(-50%,-50%) rotate(45deg);}
+}
+
+/*@keyframes carAnimation {
+	0% {left: 200px}
+	25% {left: 400px}
+	50% {left: 600px}
+	85% {left: 800px}
+	100% {left: 1000px}
+}*/
+
+@keyframes carAnimation2 {
+	0% {transform: translateX(200px);}
+	25% {transform: translateX(400px);}
+	50% {transform: translateX(600px);}
+	85% {transform: translateX(800px);}
+	100% {transform: translateX(1000px);}
+}
